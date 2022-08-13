@@ -29,6 +29,7 @@ public class MySpingMvcDispatcherServletInitializer extends AbstractAnnotationCo
     @Override
     public void onStartup(ServletContext aServletContext) throws ServletException {
         super.onStartup(aServletContext);
+        registerCharacterEncodingFilter(aServletContext);
         registerHiddenFieldFilter(aServletContext);
     }
 
