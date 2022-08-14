@@ -9,7 +9,7 @@
     <properties>
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
-        <spring.version>5.3.22</spring.version>
+        <spring.version>5.3.5</spring.version>
     </properties>
 
     <name>spring-app1 Maven Webapp</name>
@@ -29,7 +29,6 @@
             <artifactId>postgresql</artifactId>
             <version>42.4.1</version>
         </dependency>
-
 
         <!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
         <dependency>
@@ -63,7 +62,7 @@
         <dependency>
             <groupId>org.thymeleaf</groupId>
             <artifactId>thymeleaf-spring5</artifactId>
-            <version>3.1.0.M2</version>
+            <version>3.0.11.RELEASE</version>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/javax.servlet/javax.servlet-api -->
@@ -99,6 +98,14 @@
             <artifactId>spring-orm</artifactId>
             <version>${spring.version}</version>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.springframework.data/spring-data-jpa -->
+        <dependency>
+            <groupId>org.springframework.data</groupId>
+            <artifactId>spring-data-jpa</artifactId>
+            <version>2.4.7</version>
+        </dependency>
+
 
     </dependencies>
 
