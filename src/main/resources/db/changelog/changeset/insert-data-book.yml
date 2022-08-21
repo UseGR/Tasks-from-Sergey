@@ -1,0 +1,246 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: galeev
+      changes:
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 1
+              - column:
+                  name: name
+                  value: Quantum mechanics
+              - column:
+                  name: year
+                  value: 1948
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 1
+              - column:
+                  name: name
+                  value: Metal alloys
+              - column:
+                  name: year
+                  value: 1952
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 2
+              - column:
+                  name: name
+                  value: Treasure island
+              - column:
+                  name: year
+                  value: 1883
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 2
+              - column:
+                  name: name
+                  value: Pirate
+              - column:
+                  name: year
+                  value: 1822
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 2
+              - column:
+                  name: name
+                  value: The life and pirate adventures of the Glorious captain Singleton
+              - column:
+                  name: year
+                  value: 1720
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 3
+              - column:
+                  name: name
+                  value: Red corsair
+              - column:
+                  name: year
+                  value: 1827
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 4
+              - column:
+                  name: name
+                  value: Biology for high school
+              - column:
+                  name: year
+                  value: 2001
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 4
+              - column:
+                  name: name
+                  value: World of spiders. Tower. Delta
+              - column:
+                  name: year
+                  value: 2011
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 4
+              - column:
+                  name: name
+                  value: Marvel comics. Avengers
+              - column:
+                  name: year
+                  value: 1985
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 4
+              - column:
+                  name: name
+                  value: How to be a hero
+              - column:
+                  name: year
+                  value: 1994
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 5
+              - column:
+                  name: name
+                  value: Want to sing? Sing!
+              - column:
+                  name: year
+                  value: 1983
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 5
+              - column:
+                  name: name
+                  value: Restaurant menu
+              - column:
+                  name: year
+                  value: 2018
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 5
+              - column:
+                  name: name
+                  value: Math for high school
+              - column:
+                  name: year
+                  value: 2015
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 6
+              - column:
+                  name: name
+                  value: The art of reporter
+              - column:
+                  name: year
+                  value: 1992
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 6
+              - column:
+                  name: name
+                  value: Bodybuilding. Training in gym
+              - column:
+                  name: year
+                  value: 1989
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 6
+              - column:
+                  name: name
+                  value: How not to eat everything everywhere. Manual for simbiots
+              - column:
+                  name: year
+                  value: 2018
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 7
+              - column:
+                  name: name
+                  value: Dark sorcery
+              - column:
+                  name: year
+                  value: 3025
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 7
+              - column:
+                  name: name
+                  value: The history of high elves
+              - column:
+                  name: year
+                  value: 2054
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 7
+              - column:
+                  name: name
+                  value: Middle earth conquest
+              - column:
+                  name: year
+                  value: 3049
+        - insert:
+            tableName: book
+            columns:
+              - column:
+                  name: person_id
+                  value: 7
+              - column:
+                  name: name
+                  value: Rings of power
+              - column:
+                  name: year
+                  value: 3033
+

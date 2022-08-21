@@ -2,38 +2,48 @@
 
 <configuration>
 
-    <property name="DEV_HOME" value="c:/logs" />
+    <property name="DEV_HOME" value="c:/logs"/>
 
-<appender name="LogToConsole" class="ch.qos.logback.core.ConsoleAppender">
-    <layout class="ch.qos.logback.classic.PatternLayout">
-        <Pattern>
-            %d{HH:mm:ss} %-5level %logger{100} - %msg%n
-        </Pattern>
-    </layout>
-</appender>
+    <appender name="LogToConsole" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %d{HH:mm:ss} %-5level %logger{100} - %msg%n
+            </Pattern>
+        </layout>
+    </appender>
 
-<appender name="LogToFile" class="ch.qos.logback.core.FileAppender">
-    <file>${DEV_HOME}/myLogFile.log</file>
-    <append>true</append>
-    <encoder>
-        <pattern>%d{HH:mm:ss} %-5level %logger{100} - %msg%n</pattern>
-    </encoder>
-</appender>
+    <appender name="LogToFile" class="ch.qos.logback.core.FileAppender">
+        <file>${DEV_HOME}/myLogFile.log</file>
+        <append>true</append>
+        <encoder>
+            <pattern>%d{HH:mm:ss} %-5level %logger{100} - %msg%n</pattern>
+        </encoder>
+    </appender>
 
 
-<logger name="ru.galeev.springcourse.controllers.PeopleRestController" level="warn" additivity="false">
-    <appender-ref ref="LogToConsole" />
-    <appender-ref ref="LogToFile" />
-</logger>
+    <logger name="ru.galeev.springcourse.controllers.PeopleRestController" level="warn" additivity="false">
+        <appender-ref ref="LogToConsole"/>
+        <appender-ref ref="LogToFile"/>
+    </logger>
 
-<logger name="ru.galeev.springcourse.services.PeopleService" level="info" additivity="false">
-    <appender-ref ref="LogToConsole" />
-    <appender-ref ref="LogToFile" />
-</logger>
+    <logger name="ru.galeev.springcourse.services.PeopleService" level="info" additivity="false">
+        <appender-ref ref="LogToConsole"/>
+        <appender-ref ref="LogToFile"/>
+    </logger>
 
-<root level="error">
-    <appender-ref ref="LogToConsole" />
-    <appender-ref ref="LogToFile" />
-</root>
+    <logger name="ru.galeev.springcourse.controllers.BookController" level="info" additivity="false">
+        <appender-ref ref="LogToConsole"/>
+        <appender-ref ref="LogToFile"/>
+    </logger>
+
+    <logger name="ru.galeev.springcourse.services.BooksService" level="info" additivity="false">
+        <appender-ref ref="LogToConsole"/>
+        <appender-ref ref="LogToFile"/>
+    </logger>
+
+    <root level="error">
+        <appender-ref ref="LogToConsole"/>
+        <appender-ref ref="LogToFile"/>
+    </root>
 
 </configuration>

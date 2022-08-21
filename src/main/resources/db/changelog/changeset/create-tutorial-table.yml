@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - changeSet:
+      id: 1
+      author: galeev
+      changes:
+        - createTable:
+            tableName: tutorial
+            columns:
+              - column:
+                  name: tutorial_id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: title
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: description
+                  type: varchar(100)
+                  constraints:
+                    nullable: false

@@ -1,0 +1,59 @@
+databaseChangeLog:
+  - changeSet:
+      id: 4
+      author: galeev
+      changes:
+        - insert:
+            tableName: comment
+            columns:
+              - column:
+                  name: content
+                  value: comment1
+              - column:
+                  name: tutorial_id
+                  value: 1
+        - insert:
+            tableName: comment
+            columns:
+              - column:
+                  name: content
+                  value: comment2
+              - column:
+                  name: tutorial_id
+                  value: 1
+        - insert:
+            tableName: comment
+            columns:
+              - column:
+                  name: content
+                  value: comment3
+              - column:
+                  name: tutorial_id
+                  value: 1
+        - insert:
+            tableName: comment
+            columns:
+              - column:
+                  name: content
+                  value: comment1
+              - column:
+                  name: tutorial_id
+                  value: 2
+        - insert:
+            tableName: comment
+            columns:
+              - column:
+                  name: content
+                  value: comment2
+              - column:
+                  name: tutorial_id
+                  value: 2
+        - insert:
+            tableName: comment
+            columns:
+              - column:
+                  name: content
+                  value: comment3
+              - column:
+                  name: tutorial_id
+                  value: 2

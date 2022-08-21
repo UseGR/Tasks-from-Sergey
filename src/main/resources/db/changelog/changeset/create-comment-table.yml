@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: galeev
+      changes:
+        - createTable:
+            tableName: comment
+            columns:
+              - column:
+                  name: comment_id
+                  type: int
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: content
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+              - column:
+                  name: tutorial_id
+                  type: int
+                  constraints:
+                    foreignKeyName: tutorial_comment_fk
+                    referencedTableName: tutorial
+                    referencedColumnNames: tutorial_id

@@ -1,0 +1,33 @@
+databaseChangeLog:
+  - changeSet:
+      id: 2
+      author: galeev
+      changes:
+        - createTable:
+            tableName: book
+            columns:
+              - column:
+                  name: book_id
+                  type: integer
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: person_id
+                  type: integer
+                  constraints:
+                    foreignKeyName: person_book_fk
+                    referencedTableName: person
+                    referencedColumnNames: person_id
+              - column:
+                  name: name
+                  type: varchar(100)
+                  constraints:
+                    nullable: false
+                    unique: true
+              - column:
+                  name: year
+                  type: integer
+                  constraints:
+                    nullable: false

@@ -1,0 +1,23 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: galeev
+      changes:
+        - insert:
+            tableName: tutorial
+            columns:
+              - column:
+                  name: title
+                  value: tutorial1
+              - column:
+                  name: description
+                  value: description1
+        - insert:
+            tableName: tutorial
+            columns:
+              - column:
+                  name: title
+                  value: tutorial2
+              - column:
+                  name: description
+                  value: description2

@@ -1,0 +1,89 @@
+databaseChangeLog:
+  - changeSet:
+      id: 3
+      author: galeev
+      changes:
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: name
+                  value: Tony
+              - column:
+                  name: age
+                  value: 42
+              - column:
+                  name: email
+                  value: stark@avengers.com
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: name
+                  value: William
+              - column:
+                  name: age
+                  value: 36
+              - column:
+                  name: email
+                  value: bill@pirate.com
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: name
+                  value: Jack
+              - column:
+                  name: age
+                  value: 38
+              - column:
+                  name: email
+                  value: sparrow@pirate.com
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: name
+                  value: Piter
+              - column:
+                  name: age
+                  value: 21
+              - column:
+                  name: email
+                  value: spidey@avengers.com
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: name
+                  value: Mary_Jane
+              - column:
+                  name: age
+                  value: 22
+              - column:
+                  name: email
+                  value: mj@girlfriend.com
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: name
+                  value: Eddie
+              - column:
+                  name: age
+                  value: 30
+              - column:
+                  name: email
+                  value: brock@venom.com
+        - insert:
+            tableName: person
+            columns:
+              - column:
+                  name: name
+                  value: Sauron
+              - column:
+                  name: age
+                  value: 1500
+              - column:
+                  name: email
+                  value: dark_mage@mordor.com

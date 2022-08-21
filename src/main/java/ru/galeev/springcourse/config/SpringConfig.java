@@ -1,5 +1,7 @@
 package ru.galeev.springcourse.config;
 
+import liquibase.integration.spring.SpringLiquibase;
+import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.Bean;
@@ -87,6 +89,7 @@ public class SpringConfig implements WebMvcConfigurer {
         Properties properties = new Properties();
         properties.put("hibernate.dialect", env.getRequiredProperty("hibernate.dialect"));
         properties.put("hibernate.show_sql", env.getRequiredProperty("hibernate.show_sql"));
+        properties.put("hibernate.ddl-auto", env.getRequiredProperty("hibernate.ddl-auto"));
 
         return properties;
     }
@@ -128,5 +131,18 @@ public class SpringConfig implements WebMvcConfigurer {
         transactionManager.setEntityManagerFactory(entityManagerFactory().getObject());
 
         return transactionManager;
+    }
+
+    @Bean
+    public ModelMapper modelMapper() {
+        return new ModelMapper();
+    }
+
+    @Bean
+    public SpringLiquibase liquibase() {
+        SpringLiquibase liquibase = new SpringLiquibase();
+        liquibase.setChangeLog("classpath:db/changelog/db.changelog-master.yml");
+        liquibase.setDataSource(dataSource());
+        return liquibase;
     }
 }
