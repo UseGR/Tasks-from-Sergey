@@ -10,7 +10,7 @@ import ru.galeev.springcourse.models.Person;
 
 @Getter
 @Setter
-@ToString(of = {"id", "name", "createdDate"})
+@ToString(of = {"id", "name", "created"})
 public class BookDTO {
     private int id;
 
@@ -20,6 +20,6 @@ public class BookDTO {
 
     private String name;
 
-    private int createdDate;
+    private int created;
 
 }

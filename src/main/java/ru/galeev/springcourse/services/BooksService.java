@@ -26,7 +26,7 @@ public class BooksService {
 
     public List<Book> findBooksByCreatedDateBetween(int from, int to) {
         log.info("Method findBooksByCreatedDateBetween is returning books in range from = {}, to = {}...", from, to);
-        return bookRepository.findBooksByCreatedDateBetween(from, to);
+        return bookRepository.findBooksByCreatedBetween(from, to);
     }
 
     public Optional<Book> findById(int id) {

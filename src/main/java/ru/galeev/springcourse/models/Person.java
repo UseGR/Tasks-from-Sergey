@@ -15,6 +15,7 @@ import javax.validation.constraints.NotEmpty;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString(of = {"id", "name", "age", "email"})
+@EqualsAndHashCode
 public class Person {
     @Id
     @Column(name = "person_id")

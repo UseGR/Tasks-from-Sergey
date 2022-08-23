@@ -75,7 +75,7 @@ public class BookController {
     public ResponseEntity<BookDTO> updateBook(@PathVariable("id") int id, @RequestBody BookDTO bookRequest) {
         BookDTO book = convertToBookDTO(bookService.findById(id).orElseThrow(() -> new BookNotFoundException("Book with id = " + id + " isn't found")));
         book.setName(bookRequest.getName());
-        book.setCreatedDate(book.getCreatedDate());
+        book.setCreated(book.getCreated());
         log.info("Book with id = {} was updated, new data: {}", id, bookRequest);
         return new ResponseEntity<>(convertToBookDTO(bookService.save(convertToBook(book))), HttpStatus.OK);
     }

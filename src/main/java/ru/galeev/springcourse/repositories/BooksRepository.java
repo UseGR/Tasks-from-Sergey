@@ -13,5 +13,5 @@ public interface BooksRepository extends JpaRepository<Book, Integer> {
     @Transactional
     void deleteByPersonId(int personId);
 
-    List<Book> findBooksByCreatedDateBetween(int from, int to);
+    List<Book> findBooksByCreatedBetween(int from, int to);
 }

@@ -14,7 +14,8 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(of = {"id", "name", "createdDate"})
+@ToString(of = {"id", "name", "created"})
+@EqualsAndHashCode
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -29,8 +30,8 @@ public class Book {
 
     @Lob @Type(type = "org.hibernate.type.TextType")
     private String name;
-    @Column(name="created_date")
-    private int createdDate;
+    @Column(name="created")
+    private int created;
 
 
 }

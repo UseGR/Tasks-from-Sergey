@@ -17,9 +17,7 @@ databaseChangeLog:
                   name: person_id
                   type: integer
                   constraints:
-                    foreignKeyName: person_book_fk
-                    referencedTableName: person
-                    referencedColumnNames: person_id
+                    nullable: false
               - column:
                   name: name
                   type: varchar(100)
@@ -27,7 +25,7 @@ databaseChangeLog:
                     nullable: false
                     unique: true
               - column:
-                  name: year
+                  name: created
                   type: integer
                   constraints:
                     nullable: false
