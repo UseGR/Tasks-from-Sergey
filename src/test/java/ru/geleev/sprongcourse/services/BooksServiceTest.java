@@ -8,9 +8,9 @@ import ru.galeev.springcourse.models.Person;
 import ru.galeev.springcourse.repositories.BooksRepository;
 import ru.galeev.springcourse.services.BooksService;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.Optional;
+import java.time.LocalDate;
+import java.time.Month;
+import java.util.*;
 
 import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.Assert.assertEquals;
@@ -30,10 +30,10 @@ public class BooksServiceTest {
 
     @Test
     public void findByPersonIdShouldReturnPersonsWithIdListOfBooks() {
-        Book book1 = new Book(19, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Middle earth conquest", 3049);
-        Book book2 = new Book(20, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Rings of power", 3033);
-        Book book3 = new Book(17, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Dark sorcery", 3025);
-        Book book4 = new Book(18, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "The history of high elves", 2054);
+        Book book1 = new Book(19, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Middle earth conquest", new GregorianCalendar(3049, Calendar.JANUARY, 1));
+        Book book2 = new Book(20, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Rings of power", new GregorianCalendar(3033, Calendar.JANUARY, 1));
+        Book book3 = new Book(17, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Dark sorcery", new GregorianCalendar(3025, Calendar.JANUARY, 1));
+        Book book4 = new Book(18, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "The history of high elves", new GregorianCalendar(3054, Calendar.JANUARY, 1));
         given(booksService.findByPersonId(7)).willReturn(Arrays.asList(book1, book2, book3, book4));
 
         List<Book> books = booksService.findByPersonId(7);
@@ -47,12 +47,12 @@ public class BooksServiceTest {
 
     @Test
     public void findBooksByCreatedDateShouldReturnListOfBooksInRange() {
-        Book book1 = new Book(19, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Middle earth conquest", 3049);
-        Book book2 = new Book(20, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Rings of power", 3033);
-        Book book3 = new Book(20, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Some book", 3055);
-        given(booksService.findBooksByCreatedDateBetween(3033, 3049)).willReturn(Arrays.asList(book1, book2));
+        Book book1 = new Book(19, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Middle earth conquest", new GregorianCalendar(3049, Calendar.JANUARY, 1));
+        Book book2 = new Book(20, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Rings of power", new GregorianCalendar(3033, Calendar.JANUARY, 1));
+        Book book3 = new Book(20, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Some book", new GregorianCalendar(3055, Calendar.JANUARY, 1));
+        given(booksService.findBooksByCreatedDateBetween(new GregorianCalendar(3033, Calendar.JANUARY, 1), new GregorianCalendar(3049, Calendar.JANUARY, 1))).willReturn(Arrays.asList(book1, book2));
 
-        List<Book> books = booksService.findBooksByCreatedDateBetween(3033, 3049);
+        List<Book> books = booksService.findBooksByCreatedDateBetween(new GregorianCalendar(3033, Calendar.JANUARY, 1), new GregorianCalendar(3049, Calendar.JANUARY, 1));
         assertThat(books).contains(book1);
         assertThat(books).contains(book2);
         assertThat(books).doesNotContain(book3);
@@ -61,7 +61,7 @@ public class BooksServiceTest {
 
     @Test
     public void findBookByIdShouldReturnBookWithId() {
-        given(booksService.findById(1)).willReturn(Optional.of(new Book(19, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Middle earth conquest", 3049)));
+        given(booksService.findById(1)).willReturn(Optional.of(new Book(19, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Middle earth conquest", new GregorianCalendar(3049, Calendar.JANUARY, 1))));
 
         Book book = booksService.findById(1).orElse(null);
         assertEquals(19, book.getId());
@@ -75,7 +75,7 @@ public class BooksServiceTest {
 
     @Test
     public void saveShouldSaveBookById() {
-        Book book = new Book(19, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Middle earth conquest", 3049);
+        Book book = new Book(19, new Person(7, "Sauron", 1500, "dark_mage@mordor.com"), "Middle earth conquest", new GregorianCalendar(3049, Calendar.JANUARY, 1));
         booksService.save(book);
         verify(booksRepository).save(book);
     }

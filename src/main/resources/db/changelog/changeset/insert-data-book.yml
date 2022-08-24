@@ -14,7 +14,7 @@ databaseChangeLog:
                   value: Quantum mechanics
               - column:
                   name: created
-                  value: 1948
+                  value: 1948-01-02
         - insert:
             tableName: book
             columns:
@@ -26,7 +26,7 @@ databaseChangeLog:
                   value: Metal alloys
               - column:
                   name: created
-                  value: 1952
+                  value: 1952-01-02
         - insert:
             tableName: book
             columns:
@@ -38,7 +38,7 @@ databaseChangeLog:
                   value: Treasure island
               - column:
                   name: created
-                  value: 1883
+                  value: 1883-01-02
         - insert:
             tableName: book
             columns:
@@ -50,7 +50,7 @@ databaseChangeLog:
                   value: Pirate
               - column:
                   name: created
-                  value: 1822
+                  value: 1822-01-02
         - insert:
             tableName: book
             columns:
@@ -62,7 +62,7 @@ databaseChangeLog:
                   value: The life and pirate adventures of the Glorious captain Singleton
               - column:
                   name: created
-                  value: 1720
+                  value: 1720-01-02
         - insert:
             tableName: book
             columns:
@@ -74,7 +74,7 @@ databaseChangeLog:
                   value: Red corsair
               - column:
                   name: created
-                  value: 1827
+                  value: 1827-01-02
         - insert:
             tableName: book
             columns:
@@ -86,7 +86,7 @@ databaseChangeLog:
                   value: Biology for high school
               - column:
                   name: created
-                  value: 2001
+                  value: 2001-01-02
         - insert:
             tableName: book
             columns:
@@ -98,7 +98,7 @@ databaseChangeLog:
                   value: World of spiders. Tower. Delta
               - column:
                   name: created
-                  value: 2011
+                  value: 2011-01-02
         - insert:
             tableName: book
             columns:
@@ -110,7 +110,7 @@ databaseChangeLog:
                   value: Marvel comics. Avengers
               - column:
                   name: created
-                  value: 1985
+                  value: 1985-01-02
         - insert:
             tableName: book
             columns:
@@ -122,7 +122,7 @@ databaseChangeLog:
                   value: How to be a hero
               - column:
                   name: created
-                  value: 1994
+                  value: 1994-01-02
         - insert:
             tableName: book
             columns:
@@ -134,7 +134,7 @@ databaseChangeLog:
                   value: Want to sing? Sing!
               - column:
                   name: created
-                  value: 1983
+                  value: 1983-01-02
         - insert:
             tableName: book
             columns:
@@ -146,7 +146,7 @@ databaseChangeLog:
                   value: Restaurant menu
               - column:
                   name: created
-                  value: 2018
+                  value: 2018-01-02
         - insert:
             tableName: book
             columns:
@@ -158,7 +158,7 @@ databaseChangeLog:
                   value: Math for high school
               - column:
                   name: created
-                  value: 2015
+                  value: 2015-01-02
         - insert:
             tableName: book
             columns:
@@ -170,7 +170,7 @@ databaseChangeLog:
                   value: The art of reporter
               - column:
                   name: created
-                  value: 1992
+                  value: 1992-01-02
         - insert:
             tableName: book
             columns:
@@ -182,7 +182,7 @@ databaseChangeLog:
                   value: Bodybuilding. Training in gym
               - column:
                   name: created
-                  value: 1989
+                  value: 1989-01-02
         - insert:
             tableName: book
             columns:
@@ -194,7 +194,7 @@ databaseChangeLog:
                   value: How not to eat everything everywhere. Manual for simbiots
               - column:
                   name: created
-                  value: 2018
+                  value: 2018-01-02
         - insert:
             tableName: book
             columns:
@@ -206,7 +206,7 @@ databaseChangeLog:
                   value: Dark sorcery
               - column:
                   name: created
-                  value: 3025
+                  value: 3025-01-02
         - insert:
             tableName: book
             columns:
@@ -218,7 +218,7 @@ databaseChangeLog:
                   value: The history of high elves
               - column:
                   name: created
-                  value: 2054
+                  value: 2054-01-02
         - insert:
             tableName: book
             columns:
@@ -230,7 +230,7 @@ databaseChangeLog:
                   value: Middle earth conquest
               - column:
                   name: created
-                  value: 3049
+                  value: 3049-01-02
         - insert:
             tableName: book
             columns:
@@ -242,4 +242,4 @@ databaseChangeLog:
                   value: Rings of power
               - column:
                   name: created
-                  value: 3033
+                  value: 3033-01-02

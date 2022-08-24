@@ -6,6 +6,9 @@ import org.springframework.transaction.annotation.Transactional;
 import ru.galeev.springcourse.models.Book;
 import ru.galeev.springcourse.repositories.BooksRepository;
 
+import java.time.LocalDate;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
@@ -24,7 +27,7 @@ public class BooksService {
         return bookRepository.findByPersonId(id);
     }
 
-    public List<Book> findBooksByCreatedDateBetween(int from, int to) {
+    public List<Book> findBooksByCreatedDateBetween(Calendar from, Calendar to) {
         log.info("Method findBooksByCreatedDateBetween is returning books in range from = {}, to = {}...", from, to);
         return bookRepository.findBooksByCreatedBetween(from, to);
     }

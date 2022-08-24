@@ -1,12 +1,15 @@
 package ru.galeev.springcourse.models;
 
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
 import org.hibernate.annotations.Type;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import javax.persistence.*;
+import java.util.Calendar;
 
 @Entity
 @Table(name="Book")
@@ -14,8 +17,8 @@ import javax.persistence.*;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-@ToString(of = {"id", "name", "created"})
 @EqualsAndHashCode
+@ToString(of = {"id", "name"})
 public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -28,10 +31,12 @@ public class Book {
     @JsonIgnore
     private Person person;
 
-    @Lob @Type(type = "org.hibernate.type.TextType")
+    @Column(name = "name")
     private String name;
-    @Column(name="created")
-    private int created;
 
+    @Column(name="created")
+    @JsonFormat(pattern = "yyyy-MM-dd")
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
+    private Calendar created;
 
 }
